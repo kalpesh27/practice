@@ -13,7 +13,15 @@ class LinkedList {
             this.data = d;
             this.next = null;
         }
+    }
 
+    public void printList() {
+
+        Node n = this.head;
+        while (n != null) {
+            System.out.println(n.data + " ");
+            n = n.next;
+        }
     }
 
     public static void main(String args[]) {
@@ -28,7 +36,6 @@ class LinkedList {
         llist.head.next = second;
         second.next = third;
 
-        System.out.println(" Printing the Linked List " + llist.head.data + " Second " + llist.head.next.data
-                + " Third " + llist.head.next.next.data);
+        llist.printList();
     }
 }
